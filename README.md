@@ -28,6 +28,8 @@ PS：如果Shader代码不是自己写的，一定要加一个`Credit: 原网址
 
 4. 如果有用到材质的话（该特效就用到了），将材质图片（下方的iChannel0）右键保存至特效目录下，重命名为`iChannel0.png`，在着色器的代码上方加上材质的`img`标签，`name`设定为`iChannel0`，再加个`hidden`的属性即可
 
+如果`iChannel0.png`是个cubemap，要加上`type="cube"`，uniform的名称会相对应地变为`iChannel0Cube`
+
 ```html
 <img src="./iChannel0.png" name="iChannel0" hidden />
 ```
