@@ -89,7 +89,7 @@
             // Normalized pixel coordinates (from 0 to 1)
             vec2 uv=fragCoord/iResolution.xy;
             uv-=.5;
-            uv*=iResolution.x/iResolution.y;
+            uv.x*=iResolution.x/iResolution.y;
             
             float noise=pow(wave(uv),2.);
             vec3 col=cosPalette(noise,vec3(128.,128.,128.)/255.,vec3(123.,73.,35.)/255.,vec3(255.,255.,255.)/255.,vec3(0.,25.,50.)/255.);
